@@ -49,9 +49,9 @@ export class ChartComponent implements AfterViewInit {
         min: 0,
         max: 100,
         stops: [
-          [0.1, '#55BF3B'], // green
-          [0.5, '#DDDF0D'], // yellow
-          [0.9, '#DF5353'], // red
+          [0.1, '#55BF3B'],  
+          [0.5, '#DDDF0D'],  
+          [0.9, '#DF5353'],  
         ],
         minorTickInterval: null,
         tickAmount: 2,
