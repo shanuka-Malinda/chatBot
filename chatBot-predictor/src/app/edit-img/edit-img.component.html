@@ -1,0 +1,7 @@
+<button (click)="toggleEraser()">
+    {{ isEraser ? 'Switch to Draw Mode' : 'Switch to Eraser Mode' }}
+</button>
+<button (click)="saveAsPng()">Save as PNG</button>
+<button (click)="copyToClipboard()">Copy to Clipboard</button>
+<input type="file" (change)="loadImage($event)">
+<canvas #canvas width="800" height="600" style="border:1px solid #000;"></canvas> 

@@ -1,0 +1,34 @@
+<!-- upload.component.html -->
+
+<div>
+    <input type="file" (change)="onFileSelected($event)" />
+    <button (click)="onUpload()">Upload</button>
+    <div *ngIf="imageUrl">
+      <p>Image URL: {{ imageUrl }}</p>
+      <img [src]="imageUrl" alt="Uploaded Image" />
+    </div>
+    <div *ngIf="error">
+      <p>Error: {{ error }}</p>
+    </div>
+  </div>
+  asxasxascasc
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>

@@ -1,0 +1,68 @@
+<p class="topic">Linear-Regression calculations</p>
+<!-- <div *ngFor="let data of myData">
+    <p>x={{data.x}} y={{data.y}}</p>
+</div> -->
+<div class="wrpper">
+    <div class="tblMain">
+        <div>
+            <li class="top">X</li>
+            <li *ngFor="let x of xValues">{{x}}</li>
+            <li class="bot">&Sigma;={{sumX}}</li>
+        </div>
+        <div>
+            <li class="top">Y</li>
+            <li *ngFor="let y of yValues">{{y}}</li>
+            <li class="bot">&Sigma;={{sumY}}</li>
+        </div>
+        <div>
+            <li class="top">X-X&#772;</li>
+            <li *ngFor="let x of xXvalues">{{x}}</li>
+            <li class="bot"></li>
+        </div>
+        <div>
+            <li class="top">Y-Y&#772;</li>
+            <li *ngFor="let y of yYvalues">{{y}}</li>
+            <li class="bot"></li>
+        </div>
+        <div>
+            <li class="top">(X-X&#772;)(Y-Y&#772;)</li>
+            <li *ngFor="let xy of xxSubyy">{{xy}}</li>
+            <li class="bot">&Sigma;={{sumxxyy}}</li>
+        </div>
+    </div>
+    <div class="cal">
+        <div class="val">
+            <span>X&#772; =&Sigma;(x-x&#772;)/n = {{X}}</span><br>
+            <span>Y&#772; =&Sigma;(y-y&#772;)/n = {{Y}}</span><br>
+            <span>COV(X,Y)=&Sigma;(X-X&#772;)(Y-Y&#772;)/n-1 = {{COVxy}}</span><br>
+            <span>S<sup>2</sup> = &Sigma;(x-x')<sup>2</sup>/n-1 = {{SS}}</span><br>
+        </div>
+        <div class="graph">
+            
+            <span>Y = &beta;<sub>0</sub> + &beta;<sub>1</sub>x + &epsilon;</span><br>
+            <span>Y&#772; = b<sub>0</sub> + b<sub>1</sub>x</span><br>
+            <span>b<sub>1</sub> = COV(X,Y)/S <sup>2</sup> <sub>x</sub>={{b1}}</span><br>
+            <span>b<sub>0</sub>= Y&#772; - b<sub>1</sub>X&#772; = {{b2}}</span>
+        </div>
+    </div>
+</div>
+
+<!-- <p>x={{xValues | json}} </p>
+<p>x'={{X}}</p>
+<p>x-x'={{xXvalues|json}}</p>
+ 
+<br><br><br>
+
+<p>y={{yValues | json}} </p>
+<p>y'={{Y}}</p>
+<p>y-y'={{yYvalues|json}}</p>
+
+<br><br><br>
+
+<p>{{L}}</p>
+<p>(x-x')(y-y')={{xxSubyy |json}}</p>
+<p>COV(x,y)={{COVxy}}</p>
+<p>S <sup>2</sup>={{SS}}</p>
+<p>b1={{b1}}</p><p>b0={{b2}}</p>
+
+<h1>Y={{b2}}{{b1}}X</h1> -->

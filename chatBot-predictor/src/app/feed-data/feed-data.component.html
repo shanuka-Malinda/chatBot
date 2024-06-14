@@ -1,0 +1,22 @@
+<p>Feed Your Data</p>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="input">
+        <input type="number" placeholder="X-value" formControlName="x">
+        <input type="number" placeholder="Y-value" formControlName="y">
+    </div>
+    <button type="submit">Feed</button>
+</form>
+
+<div class="Dtable">
+    <h2>Data set</h2>
+    <table >
+        <tr>
+            <th>X value</th>
+            <th>Y value</th>
+        </tr>
+        <tr *ngFor="let d of dataTable">
+        <td>{{d.x}}</td>
+        <td>{{d.y}}</td>
+        </tr>
+    </table>
+</div>

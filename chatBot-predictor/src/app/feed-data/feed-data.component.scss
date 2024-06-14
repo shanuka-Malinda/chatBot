@@ -1,0 +1,51 @@
+
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+    font-weight: 700;
+}
+.input input{
+    height: 20px;
+    margin: 5px;
+}
+form button{
+    width: 80px;
+    height: 30px;
+    background-color: darkorange;
+    color: whitesmoke;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left:288px;
+    margin: 5px;
+}
+form button:hover{
+    background-color: darkgoldenrod;
+}
+
+.Dtable{
+    width: 100%;
+    h2{
+        border-bottom: 1px solid grey;
+    }
+}
+.Dtable table{
+    width: 50%;
+    tr{
+        text-align: center;
+    }
+    
+    td{
+        padding: 5px;
+    }
+    th{
+        background-color: mediumseagreen;
+        color: whitesmoke;
+        padding: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+    }
+}
