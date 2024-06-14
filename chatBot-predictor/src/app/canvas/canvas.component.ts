@@ -9,9 +9,8 @@ export class CanvasComponent implements AfterViewInit{
   @ViewChild('canvas', { static: false }) canvas!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private drawing = false;
-  public isEraser = false; // Add a flag for eraser mode
-  private eraserSize = 10; // Eraser size, you can adjust it
-
+  public isEraser = false; 
+  private eraserSize = 10; 
   ngAfterViewInit() {
     const canvasEl = this.canvas.nativeElement;
     const context = canvasEl.getContext('2d');
@@ -24,8 +23,8 @@ export class CanvasComponent implements AfterViewInit{
   }
 
   fillCanvasWithWhite() {
-    this.ctx.fillStyle = '#FFFFFF'; // Set the background color to white
-    this.ctx.fillRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height); // Fill the canvas with white
+    this.ctx.fillStyle = '#FFFFFF';  
+    this.ctx.fillRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);  
   }
 
   toggleEraser() {
@@ -43,11 +42,11 @@ export class CanvasComponent implements AfterViewInit{
   onMouseMove(event: MouseEvent) {
     if (this.drawing) {
       if (this.isEraser) {
-        this.ctx.strokeStyle = '#FFFFFF'; // Assuming white is the background color
+        this.ctx.strokeStyle = '#FFFFFF';  
         this.ctx.lineWidth = this.eraserSize;
       } else {
-        this.ctx.strokeStyle = '#000000'; // Drawing color
-        this.ctx.lineWidth = 2; // Drawing line width
+        this.ctx.strokeStyle = '#000000';  
+        this.ctx.lineWidth = 2;  
       }
       this.ctx.lineTo(event.offsetX, event.offsetY);
       this.ctx.stroke();
@@ -67,7 +66,7 @@ export class CanvasComponent implements AfterViewInit{
   }
 
   saveAsPng() {
-    // Redraw the canvas with a white background before saving
+    
     this.redrawCanvasWithBackground(() => {
       const canvasEl = this.canvas.nativeElement;
       const image = canvasEl.toDataURL('image/png');
@@ -79,7 +78,7 @@ export class CanvasComponent implements AfterViewInit{
   }
 
   async copyToClipboard() {
-    // Redraw the canvas with a white background before copying
+  
     this.redrawCanvasWithBackground(() => {
       const canvasEl = this.canvas.nativeElement;
       canvasEl.toBlob(async (blob) => {
@@ -95,17 +94,17 @@ export class CanvasComponent implements AfterViewInit{
   }
 
   private redrawCanvasWithBackground(callback: () => void) {
-    // Create a temporary canvas to redraw the content with a white background
+   
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
     if (tempCtx) {
       tempCanvas.width = this.canvas.nativeElement.width;
       tempCanvas.height = this.canvas.nativeElement.height;
-      tempCtx.fillStyle = '#FFFFFF'; // Set background to white
-      tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height); // Fill the temporary canvas with white
-      tempCtx.drawImage(this.canvas.nativeElement, 0, 0); // Draw the current canvas content onto the temporary canvas
-      this.ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height); // Clear the original canvas
-      this.ctx.drawImage(tempCanvas, 0, 0); // Draw the combined content back to the original canvas
+      tempCtx.fillStyle = '#FFFFFF'; 
+      tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);  
+      tempCtx.drawImage(this.canvas.nativeElement, 0, 0);  
+      this.ctx.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);  
+      this.ctx.drawImage(tempCanvas, 0, 0); 
       callback();
     }
   }
