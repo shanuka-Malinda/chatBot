@@ -11,8 +11,8 @@ export class CloudinaryService {
 
 
 
-  private cloudName = 'dtaiwjicp';
-  private uploadPreset = 'imgMy_data'; // Set up a preset in your Cloudinary dashboard
+  private cloudName = '$$$$$$$';
+  private uploadPreset = 'my_preset'; // Set up a preset in your Cloudinary dashboard
 
   constructor(private http: HttpClient) { }
 
